@@ -34,7 +34,7 @@ void listPrintf(deque<student> d)
 	printf("序号\t姓名\t学号\t语文\t数学\t英语\t平均分\t\n");
 	for (int i = 0; i < (int)d.size(); i++)	//编译器d.size()会提示worring
 	{
-		printf("%d\t", i);
+		printf("%d\t", i+1);
 		printf("%s\t", d.at(i).name.c_str() );    // 调用c_str()函数
 		printf("%s\t", d.at(i).id.c_str() );
 		printf("%g\t", d.at(i).GetGrade(0) );
@@ -59,7 +59,7 @@ void changeStudent(deque<student>* d) {	//形参实参？
 	int n;
 	printf("输入修改的序号:\n");
 	scanf("%d", &n);
-	(*d).at(n) = scanfStudent();
+	(*d).at(n+1) = scanfStudent();
 	printf("*******修改完成*******");
 }
 
